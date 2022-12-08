@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic JavaScript and HTML Test Overview</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form class="input-form" name="input_form">
+      <h2 class="input-form__title">Test</h2>
+
+      <div class="input-form__wrap-input">
+        <label class="input-form__label">
+          Name/Value Pair
+          <input
+            class="input-form__input"
+            type="text"
+            placeholder="Name=Value"
+            required
+            pattern="^[A-Za-z0-9 _\t]+=[A-Za-z0-9 _\t]+$"
+            title="Please include Name=Value"
+          />
+        </label>
+        <button class="input-form__btn" type="button" data-action="add">
+          Add
+        </button>
+      </div>
+
+      <div class="input-form__wrap-input input-form__wrap-output">
+        <label class="input-form__label">
+          Name/Value Pair List
+          <textarea
+            class="input-form__output"
+            name="pair-list"
+            rows="10"
+            placeholder=""
+            readonly
+          ></textarea>
+        </label>
+        <div class="input-form__btns">
+          <button
+            class="input-form__btn"
+            type="button"
+            data-action="sort_by_name"
+          >
+            Sort by Name
+          </button>
+          <button
+            class="input-form__btn"
+            type="button"
+            data-action="sort_by_value"
+          >
+            Sort by Value
+          </button>
+          <button class="input-form__btn" type="button" data-action="delete">
+            Delete
+          </button>
+          <button class="input-form__btn" type="button" data-action="show_xml">
+            Show XML
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>
